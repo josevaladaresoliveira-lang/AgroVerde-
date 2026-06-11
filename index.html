@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agro Verde — Sustentabilidade no Campo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HOME ===== -->
+  <section id="home" class="screen active">
+    <header class="site-header">
+      <div class="logo">
+        <span class="logo-leaf">🌿</span>
+        <span class="logo-text">Agro Verde</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="hero-badge">Agricultura Sustentável</div>
+      <h1 class="hero-title">O futuro do campo<br>começa hoje.</h1>
+      <p class="hero-desc">
+        Práticas agrícolas sustentáveis protegem o solo, a água e a biodiversidade
+        enquanto garantem alimentos para as próximas gerações. Descubra o quanto
+        você sabe sobre esse tema essencial.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Perguntas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">~3</span>
+          <span class="stat-label">Minutos</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">Aprendizado</span>
+        </div>
+      </div>
+
+      <button class="btn-start" id="btnStart">
+        Iniciar o Quiz
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </main>
+
+    <div class="home-illustration" aria-hidden="true">
+      <div class="field-row field-row--1"></div>
+      <div class="field-row field-row--2"></div>
+      <div class="field-row field-row--3"></div>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="quiz" class="screen">
+    <div class="quiz-wrap">
+      <div class="quiz-top">
+        <button class="btn-back" id="btnBack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Início
+        </button>
+        <div class="quiz-counter">
+          <span id="qCurrent">1</span><span class="counter-sep">/</span><span id="qTotal">5</span>
+        </div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="question-card" id="questionCard">
+        <p class="question-topic" id="questionTopic"></p>
+        <h2 class="question-text" id="questionText"></h2>
+        <div class="options-grid" id="optionsGrid"></div>
+      </div>
+
+      <button class="btn-next" id="btnNext" disabled>
+        Próxima pergunta
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== RESULTADO ===== -->
+  <section id="result" class="screen">
+    <div class="result-wrap">
+      <div class="result-icon" id="resultIcon" aria-hidden="true"></div>
+      <h2 class="result-title" id="resultTitle"></h2>
+      <p class="result-sub" id="resultSub"></p>
+
+      <div class="score-ring">
+        <svg viewBox="0 0 120 120" class="ring-svg">
+          <circle class="ring-bg" cx="60" cy="60" r="50"/>
+          <circle class="ring-fg" id="ringFg" cx="60" cy="60" r="50"/>
+        </svg>
+        <div class="score-inner">
+          <span class="score-num" id="scoreNum">0</span>
+          <span class="score-denom">/5</span>
+        </div>
+      </div>
+
+      <p class="result-msg" id="resultMsg"></p>
+
+      <button class="btn-restart" id="btnRestart">
+        Tentar novamente
+      </button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
